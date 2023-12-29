@@ -4,7 +4,7 @@ from constants import Constants
 from locators import Locators
 
 
-class Test:
+class TestLogin:
     def test_login_from_registration_form_positive(self, driver):
         # Клик по кнопке "Войти в аккаунт"
         driver.find_element(*Locators.BUTTON_PESONAL_ACCOUNT).click()
@@ -29,4 +29,3 @@ class Test:
             EC.visibility_of_element_located(Locators.BUTTON_PLACE_ORDER)).text
         assert button_text == "Оформить заказ"
 
-        driver.quit()

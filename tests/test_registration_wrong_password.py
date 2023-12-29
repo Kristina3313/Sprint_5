@@ -3,7 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from constants import Constants
 from locators import Locators
 
-class Test:
+
+class TestRegistration:
     def test_registration_wrong_password(self, driver):
         # Клик по кнопке "Войти в аккаунт"
         driver.find_element(*Locators.BUTTON_PESONAL_ACCOUNT).click()
@@ -27,5 +28,3 @@ class Test:
 
         # Проверяем, что текст соответствует ошибке
         assert wrong.text == 'Некорректный пароль'
-
-        driver.quit()

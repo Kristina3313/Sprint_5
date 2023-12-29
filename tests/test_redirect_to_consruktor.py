@@ -4,7 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from constants import Constants
 from locators import Locators
 
-class Test:
+
+class TestRedirect:
     def test_redirect_to_construktor_positive(self, driver):
         # Клик по кнопке "Войти в аккаунт"
         driver.find_element(*Locators.BUTTON_PESONAL_ACCOUNT).click()
@@ -31,5 +32,3 @@ class Test:
         # Проверяем элемент конструктора отображается на странице
         element = driver.find_element(By.CLASS_NAME, "BurgerIngredients_ingredients__1N8v2")
         assert element.is_displayed()
-
-        driver.quit()

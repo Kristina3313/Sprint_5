@@ -2,7 +2,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import Locators
 
-class Test:
+class TestClickSections:
     def test_active_tab_nachinki_pisitive(self, driver):
         # Клик на раздел "Начинки"
         driver.find_element(*Locators.NACHINKI).click()
@@ -12,4 +12,3 @@ class Test:
         # Проверка, что раздел "Начинки" активен
         assert driver.find_element(*Locators.ACTIVE_TAB).text == 'Начинки'
 
-        driver.quit()

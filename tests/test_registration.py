@@ -5,9 +5,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from constants import Constants
 from locators import Locators
 
-new_email = f'kristina_naumova_4{random.randint(100,999)}@yandex.ru'
+new_email = f'kristina_naumova_4{random.randint(100, 999)}@yandex.ru'
 
-class Test:
+
+class TestRegistration:
     def test_registration_positive(self, driver):
         # Клик по кнопке "Войти в аккаунт"
         driver.find_element(*Locators.BUTTON_PESONAL_ACCOUNT).click()
@@ -27,5 +28,3 @@ class Test:
 
         WebDriverWait(driver, 10).until(EC.url_contains(Constants.LOGIN_URL))
         assert '/login' in driver.current_url
-
-        driver.quit()

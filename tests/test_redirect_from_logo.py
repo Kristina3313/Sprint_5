@@ -4,7 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from constants import Constants
 from locators import Locators
 
-class Test:
+
+class TestRedirect:
     def test_redirect_from_logo_positive(self, driver):
         # Клик по кнопке "Войти в аккаунт"
         driver.find_element(*Locators.BUTTON_PESONAL_ACCOUNT).click()
@@ -29,7 +30,6 @@ class Test:
         driver.find_element(*Locators.LOGO_STELLARURGER).click()
 
         # Ожидание появления элемента конструктора
-        element = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "BurgerIngredients_ingredients__1N8v2")))
+        element = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "BurgerIngredients_ingredients__1N8v2")))
         assert element.is_displayed()
-
-        driver.quit()
