@@ -1,0 +1,11 @@
+class Constants():
+    URL = 'https://stellarburgers.nomoreparties.site/'
+    LOGIN_URL = 'https://stellarburgers.nomoreparties.site/login'
+    TEST_EMAIL = 'crystalkris13@yandex.ru'
+    TEST_PASSWORD = '24675Kris'
+    WRONG_PASSWORD = '1234'
+    NAME = 'Kristina'
+    URL_LOGIN_PAGE = 'https://stellarburgers.nomoreparties.site/login'
+    URL_RECOVERY_PASSWORD = 'https://stellarburgers.nomoreparties.site/forgot-password'
+    URL_RESET_PASSWORD = 'https://stellarburgers.nomoreparties.site/reset-password'
+    URL_PROFILE = 'https://stellarburgers.nomoreparties.site/account/profile'
